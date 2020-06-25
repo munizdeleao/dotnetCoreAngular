@@ -39,6 +39,8 @@ namespace ProAgil.API
                 .AllowAnyMethod()
                 );
 
+            app.UseStaticFiles();
+
             //app.UseHttpsRedirection();
 
             app.UseRouting();
