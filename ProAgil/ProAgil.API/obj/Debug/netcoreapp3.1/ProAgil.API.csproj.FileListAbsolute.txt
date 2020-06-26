@@ -148,3 +148,7 @@ D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.API\obj\Debug\net
 D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.API\obj\Debug\netcoreapp3.1\ProAgil.API.dll
 D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.API\obj\Debug\netcoreapp3.1\ProAgil.API.pdb
 D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.API\obj\Debug\netcoreapp3.1\ProAgil.API.genruntimeconfig.cache
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.API\bin\Debug\netcoreapp3.1\ProAgil.Domain.dll
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.API\bin\Debug\netcoreapp3.1\ProAgil.Repository.dll
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.API\bin\Debug\netcoreapp3.1\ProAgil.Domain.pdb
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.API\bin\Debug\netcoreapp3.1\ProAgil.Repository.pdb

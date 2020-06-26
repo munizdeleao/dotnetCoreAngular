@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ProAgil.API.Data;
+using ProAgil.Repository;
 
 namespace ProAgil.API
 {
@@ -22,7 +22,8 @@ namespace ProAgil.API
         {
             services.AddCors();
             services.AddControllers();
-            services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("EventosDB")));
+            services.AddDbContext<ProAgilContext>(x => x.UseSqlite(Configuration.GetConnectionString("EventosDB")));
+            services.AddScoped<IProAgilRepository, ProAgilRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "iL9pLnoRaM9vrIFgYrPfifwH5rLkLi4OPq7mX9+uvGguLHv8hh8pFadShrwJoWIR3cRvAlO+J1Z33t86znGNOQ==",
+  "success": true,
+  "projectFilePath": "D:\\formacao-angular\\vinicius\\dotnetCoreAngular\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\muniz\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\muniz\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

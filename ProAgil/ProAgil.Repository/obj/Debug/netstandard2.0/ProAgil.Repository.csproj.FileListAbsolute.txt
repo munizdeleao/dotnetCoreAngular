@@ -1,0 +1,12 @@
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\bin\Debug\netstandard2.0\ProAgil.Repository.deps.json
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\bin\Debug\netstandard2.0\ProAgil.Repository.dll
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\bin\Debug\netstandard2.0\ProAgil.Repository.pdb
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\bin\Debug\netstandard2.0\ProAgil.Domain.dll
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\bin\Debug\netstandard2.0\ProAgil.Domain.pdb
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\obj\Debug\netstandard2.0\ProAgil.Repository.csprojAssemblyReference.cache
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\obj\Debug\netstandard2.0\ProAgil.Repository.csproj.CoreCompileInputs.cache
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\obj\Debug\netstandard2.0\ProAgil.Repository.AssemblyInfoInputs.cache
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\obj\Debug\netstandard2.0\ProAgil.Repository.AssemblyInfo.cs
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\obj\Debug\netstandard2.0\ProAgil.Repository.csproj.CopyComplete
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\obj\Debug\netstandard2.0\ProAgil.Repository.dll
+D:\formacao-angular\vinicius\dotnetCoreAngular\ProAgil\ProAgil.Repository\obj\Debug\netstandard2.0\ProAgil.Repository.pdb

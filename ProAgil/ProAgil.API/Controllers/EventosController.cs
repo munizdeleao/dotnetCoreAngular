@@ -2,9 +2,8 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ProAgil.API.Data;
-using ProAgil.API.Models;
+using ProAgil.Repository;
+using ProAgil.Domain;
 
 namespace ProAgil.API.Controllers
 {
@@ -12,8 +11,8 @@ namespace ProAgil.API.Controllers
     [Route("api/[controller]")]
     public class EventosController : ControllerBase
     {
-        private readonly DataContext _context;
-        public EventosController(DataContext context)
+        private readonly IProAgilRepository _context;
+        public EventosController(IProAgilRepository context)
         {
             _context = context;
 
@@ -23,7 +22,20 @@ namespace ProAgil.API.Controllers
         {
             try
             {
-                var result = await _context.Eventos.ToListAsync();
+                var result = await _context.GetAllEventoAsync(true);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+        [HttpGet("getByTema/{tema}")]
+        public async Task<IActionResult> Get(string tema)
+        {
+            try
+            {
+                var result = await _context.GetAllEventoByTemaAsync(tema, true);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -36,7 +48,7 @@ namespace ProAgil.API.Controllers
         {
             try
             {
-                var result = await _context.Eventos.FirstOrDefaultAsync(m => m.EventoId == id);
+                var result = await _context.GetAllEventoByIdAsync(id, true);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -44,14 +56,21 @@ namespace ProAgil.API.Controllers
                 return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Evento evento)
         {
             try
             {
-                _context.Eventos.Add(evento);
-                await _context.SaveChangesAsync();
-                return Ok(StatusCodes.Status201Created);
+                _context.Add(evento);
+                if (await _context.SaveChangesAsync())
+                {
+                    return Created($"/api/eventos/{evento.Id}", evento);
+                }
+                else
+                {
+                    throw new Exception("Erro ao adicionar evento");
+                }
             }
             catch (Exception ex)
             {
@@ -63,10 +82,15 @@ namespace ProAgil.API.Controllers
         {
             try
             {
-                _context.Eventos.Update(evento);
-                await _context.SaveChangesAsync();
-
-                return Ok(StatusCodes.Status201Created);
+                _context.Update(evento);
+                if (await _context.SaveChangesAsync())
+                {
+                    return Created($"/api/eventos/{evento.Id}", evento);
+                }
+                else
+                {
+                    throw new Exception("Erro ao alterar evento");
+                }
             }
             catch (Exception ex)
             {
@@ -78,10 +102,16 @@ namespace ProAgil.API.Controllers
         {
             try
             {
-                var evento = await _context.Eventos.FirstOrDefaultAsync(m => m.EventoId == id);
-                _context.Eventos.Remove(evento);
-                await _context.SaveChangesAsync();
-                return Ok(StatusCodes.Status200OK);
+                var evento = await _context.GetAllEventoByIdAsync(id, false);
+                _context.Delete(evento);
+                if (await _context.SaveChangesAsync())
+                {
+                    return Ok(StatusCodes.Status200OK);
+                }
+                else
+                {
+                    throw new Exception("Erro ao adicionar evento");
+                }
             }
             catch (Exception ex)
             {
